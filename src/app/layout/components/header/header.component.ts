@@ -15,4 +15,8 @@ export class HeaderComponent implements OnInit {
     this.pushRightClass = 'push-right';
   }
 
+  toggleSidebar() {
+    const dom: any = document.querySelector('body');
+    dom.classList.toggle(this.pushRightClass);
+}
 }
