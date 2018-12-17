@@ -1,75 +1,230 @@
 <div class="container">
-<form>
-  <div class="row">
-    <div class="col form-group">
-        <label for="assetTagId" class="font-weight-bold">Asset Tag Id :</label>
-      <input type="text" Id="assetTagId" class="form-control" placeholder="Asset Tag Id">
-    </div>
-    <div class="col form-group">
-        <label for="assetCategory" class="font-weight-bold">Asset Category :</label>
-      <input type="text" Id="assetCategory" class="form-control" placeholder="Asset Category">
-    </div>
-    <div class="col form-group">
-        <label for="assetName" class="font-weight-bold">Asset Name :</label>
-      <input type="text" Id="assetName" class="form-control" placeholder="Asset Name">
-    </div>
+    <form>
+<div class="card">
+  <div class="card-header h4 text-white bg-primary">
+      <i class="fa fa-database fa-fw"></i>&nbsp;Add Asset
   </div>
-  <div class="row">
-    <div class="col form-group">
-        <label for="assetDesc" class="font-weight-bold">Asset Description :</label>
-        <input type="text" Id="assetDesc" class="form-control" placeholder="Asset Description">
-    </div>
-  </div>
-  <div class="row">
-      <div class="col form-group">
- <label for="assetBrand" class="font-weight-bold">Brand Name :</label>
-          <input type="text" Id="assetBrand" class="form-control" placeholder="Asset Brand Name">
-      </div>
-    <div class="col form-group">
-        <label for="assetModel" class="font-weight-bold">Model No :</label>
-        <input type="text" Id="assetModel" class="form-control" placeholder="Asset Model Number">
-    </div>
-    <div class="col form-group">
-        <label for="assetSerail" class="font-weight-bold">Serail No :</label>
-        <input type="text" Id="assetSerail" class="form-control" placeholder="Asset Serial Number">
-    </div>
-  </div>
-  <div class="row">
-      <div class="col form-group">
-          <label for="assetCost" class="font-weight-bold">Asset Cost :</label>
-          <input type="text" Id="assetCost" class="form-control" placeholder="Asset Cost">
-      </div>
-    <div class="col form-group">
-        <label for="purchaseFrom" class="font-weight-bold">Purchase From :</label>
-        <input type="text" Id="purchaseFrom" class="form-control" placeholder="Purchase From">
-    </div>
-    <div class="col form-group">
-        <label for="purchaseDate" class="font-weight-bold">Purchase Date :</label>
-        <input type="text" Id="purchaseDate" class="form-control" placeholder="Purchase Date">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col form-group">
-        <label for="warrentyExpiryDate" class="font-weight-bold">Warrenty Expiry Date :</label>
-        <input type="text" Id="warrentyExpiryDate" class="form-control" placeholder="Warrenty Expiry Date">
-    </div>
-    <div class="col form-group">
-        <label for="warrentyDacument" class="font-weight-bold">Warrenty Document :</label>
-        <input type="text" Id="assetSerail" class="form-control" placeholder="Warrenty Document">
-    </div>
-  </div>
-  <div class="row">
-      <div class="col form-group">
-          <label for="assetImage" class="font-weight-bold">Asset Image :</label>
-          <input type="text" Id="assetImage" class="form-control" placeholder="Asset Image">
-      </div>
-      <div class="col form-group">
-          <img>
-      </div>
-    </div>
-    <button type="button" class="btn btn-primary mr-5">Submit</button>
-    <button type="button" class="btn btn-primary">Cancel</button>
 
+  <div class="card-body text-primary">
+
+      <div class="row mb-0">
+        <div class="col form-group">
+            <label for="assetTagId" class="font-weight-bold">Asset Tag Id :</label>
+          <input type="text" Id="assetTagId" class="form-control" placeholder="Asset Tag Id">
+        </div>
+        <div class="col form-group">
+            <label for="assetCategory" class="font-weight-bold">Asset Category :</label>
+            <select class="custom-select" id="assetCategory">
+                <option selected>Select Asset Category.</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+          <!-- <input type="text" Id="assetCategory" class="form-control" placeholder="Asset Category"> -->
+        </div>
+        <div class="col form-group">
+            <label for="assetName" class="font-weight-bold">Asset Name :</label>
+          <input type="text" Id="assetName" class="form-control" placeholder="Asset Name">
+        </div>
+      </div>
+      <div class="row mb-0">
+        <div class="col form-group">
+            <label for="assetDesc" class="font-weight-bold">Asset Description :</label>
+            <textarea Id="assetDesc" class="form-control" placeholder="Asset Description" rows=2></textarea>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col form-group">
+              <label for="assetBrand" class="font-weight-bold">Brand Name :</label>
+              <input type="text" Id="assetBrand" class="form-control" placeholder="Asset Brand Name">
+          </div>
+        <div class="col form-group">
+            <label for="assetModel" class="font-weight-bold">Model No :</label>
+            <input type="text" Id="assetModel" class="form-control" placeholder="Asset Model Number">
+        </div>
+        <div class="col form-group">
+            <label for="assetSerail" class="font-weight-bold">Serail No :</label>
+            <input type="text" Id="assetSerail" class="form-control" placeholder="Asset Serial Number">
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col form-group">
+            <label for="purchaseFrom" class="font-weight-bold">Purchase From :</label>
+            <input type="text" Id="purchaseFrom" class="form-control" placeholder="Purchase From">
+        </div>
+        <div class="col form-group">
+            <label for="purchaseDate" class="font-weight-bold">Purchase Date :</label>
+            <input id="purchaseDate" type="text"  bsDatepicker [bsConfig]="datePickerConfig" class="form-control"
+            placeholder="Purchase Date" />
+        </div>
+        <div class="col form-group">
+            <label for="warrentyExpiryDate" class="font-weight-bold">Warrenty Expiry Date :</label>
+            <input id="warrentyExpiryDate" type="text"  bsDatepicker [bsConfig]="datePickerConfig" placeholder="Warrenty Expiry Date" class="form-control" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col form-group">
+            <label for="warrentyDocument" class="font-weight-bold">Warrenty Document :</label>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="warrentyDocument">
+                <label class="custom-file-label" for="warrentyDocument">Browse Warrenty Document</label>
+              </div>
+        </div>
+        <div class="col form-group">
+            <label for="assetImage" class="font-weight-bold">Asset Image :</label>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="assetImage">
+                <label class="custom-file-label" for="assetImage">Browse Asset Image</label>
+              </div>
+        </div>
+        <div class="col form-group">
+            <img>
+        </div>
+      </div>
+  </div>
+  <div class="card-footer">
+
+         <button type="button" class="btn btn-primary mr-5"><i class="fa fa-save fa-fw"></i>&nbsp;Save</button>
+
+
+    <button type="button" class="btn btn-primary"><i class="fa fa-close fa-fw"></i>&nbsp;Cancel</button>
+  </div>
+
+</div>
 </form>
 </div>
+
+---------------------------- Add User -----------------
+
+<div class="container col-6">
+    <form>
+    <div class="card">
+      <div class="card-header h4 text-white bg-primary">
+          <i class="fa fa-user fa-fw"></i>&nbsp;Add User
+      </div>
+    
+      <div class="card-body text-primary">
+          <div class="row">
+              <label for="title" class="font-weight-bold col-3 col-form-label">Title :</label>
+            <div class="col-7 form-group">
+            <select class="custom-select" id="title" >
+                <option selected>Select Title.</option>
+                <option value="1">Mr.</option>
+                <option value="2">Mrs.</option>
+    
+              </select>
+            </div>
+          </div>
+          <div class="row">
+              <label for="firstName" class="font-weight-bold col-3 col-form-label">First Name :</label>
+            <div class="col form-group">
+                <input type="text" Id="firstName" class="form-control" placeholder="Enter Fisrt Name">
+            </div>
+          </div>
+          <div class="row">
+              <label for="lastName" class="font-weight-bold col-3 col-form-label">Last Name :</label>
+            <div class="col form-group">
+                <input type="text" Id="lastName" class="form-control" placeholder="Enter Last Name">
+            </div>
+          </div>
+          <div class="row">
+              <label for="employeeId" class="font-weight-bold col-3 col-form-label">Employee Id :</label>
+            <div class="col form-group">
+                <input type="text" Id="employeeId" class="form-control" placeholder="Enter Employee ID">
+            </div>
+          </div>
+          <div class="row">
+              <label for="phoneno" class="font-weight-bold col-3 col-form-label">Phone No. :</label>
+            <div class="col form-group">
+                <input type="text" Id="phoneno" class="form-control" placeholder="Enter Phone Number">
+            </div>
+          </div>
+          <div class="row">
+              <label for="email" class="font-weight-bold col-3 col-form-label">Email :</label>
+            <div class="col form-group">
+                <input type="text" Id="email" class="form-control" placeholder="Enter Email Address">
+            </div>
+          </div>
+          <div class="row">
+              <label for="department" class="font-weight-bold col-3 col-form-label">Department :</label>
+            <div class="col form-group">
+                <select class="custom-select" id="department">
+                    <option selected>Select Department.</option>
+                    <option value="1">Admin</option>
+                    <option value="2">Human Resource</option>
+                    <option value="3">Finance</option>
+                  </select>
+            </div>
+          </div>
+          <div class="row">
+              <label for="role" class="font-weight-bold col-3 col-form-label">Role :</label>
+            <div class="col form-group">
+                <select class="custom-select" id="role">
+                    <option selected>Select Role.</option>
+                    <option value="1">Super Admin</option>
+                    <option value="1">Admin</option>
+                    <option value="2">User</option>
+                    <option value="3">Gate Man</option>
+                  </select>
+            </div>
+          </div>
+    
+    
+    
+    
+    
+      </div>
+      <div class="card-footer">
+    
+             <button type="button" class="btn btn-primary mr-5"><i class="fa fa-save fa-fw"></i>&nbsp;Save</button>
+    
+    
+        <button type="button" class="btn btn-primary"><i class="fa fa-close fa-fw"></i>&nbsp;Cancel</button>
+      </div>
+    
+    </div>
+    </form>
+    </div>
+
+    ----------------------------- List User ---------------------
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header h4 text-white bg-primary">
+                <i class="fa fa-users fa-fw"></i>&nbsp; User List
+            </div>
+            <div class="card-body border border-primary">
+                <table class="table table-bordered table-md text-primary">
+                    <thead>
+                      <th >Name</th>
+                      <th>Emp Id</th>
+                      <th>Phone</th>
+                      <th>Email</th>
+                      <th>Department</th>
+                      <th>Role</th>
+                      <th></th>
+                    </thead>
+                  <tbody>
+                    <tr>
+                      <td>Mr. Vishal Tyagi</td>
+                      <td>1234456</td>
+                      <td>98998100</td>
+                      <td>abc@abc.com</td>
+                      <td>Finance</td>
+                      <td>Super Admin</td>
+                      <td class="text-center"> <a href="#"><i class="fa fa-pencil-square-o fa-fw"></i></a> |
+                        <a href="#"><i class="fa fa-trash-o fa-fw"></i></a></td>
+  
+  
+                    </tr>
+                  </tbody>
+                </table>
+  
+            </div>
+  
+        </div>
+    </div>
+  
+-----------------------------   
 
