@@ -1,0 +1,19 @@
+table.table-bordered{
+    border:1px solid #007bff;
+  }
+  table.table-bordered > thead > th{
+    border:1px solid #007bff;
+  }
+  table.table-bordered > tbody > tr > td{
+    border:1px solid #007bff;
+  }
+  .form-group {
+    margin-bottom: 0.75rem;
+  }
+  .card-body {
+    padding: 1.5rem;
+  }
+  .card-header {
+    padding: .55rem 0.25rem;
+    margin-bottom: 0px;
+  }

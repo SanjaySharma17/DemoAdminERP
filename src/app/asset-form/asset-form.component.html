@@ -1,75 +1,97 @@
 <div class="container">
-  <form>
-    <div class="row">
-      <div class="col form-group">
-          <label for="assetTagId" class="font-weight-bold">Asset Tag Id :</label>
-        <input type="text" Id="assetTagId" class="form-control" placeholder="Asset Tag Id">
-      </div>
-      <div class="col form-group">
-          <label for="assetCategory" class="font-weight-bold">Asset Category :</label>
-        <input type="text" Id="assetCategory" class="form-control" placeholder="Asset Category">
-      </div>
-      <div class="col form-group">
-          <label for="assetName" class="font-weight-bold">Asset Name :</label>
-        <input type="text" Id="assetName" class="form-control" placeholder="Asset Name">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col form-group">
-          <label for="assetDesc" class="font-weight-bold">Asset Description :</label>
-          <input type="text" Id="assetDesc" class="form-control" placeholder="Asset Description">
-      </div>
-    </div>
-    <div class="row">
+<form>
+<div class="card">
+  <div class="card-header h4 text-white bg-primary">
+      <i class="fa fa-database fa-fw"></i>&nbsp;Add Asset
+  </div>
+
+  <div class="card-body text-primary">
+
+      <div class="row mb-0">
         <div class="col form-group">
-   <label for="assetBrand" class="font-weight-bold">Brand Name :</label>
-            <input type="text" Id="assetBrand" class="form-control" placeholder="Asset Brand Name">
+            <label for="assetTagId" class="font-weight-bold">Asset Tag Id :</label>
+          <input type="text" Id="assetTagId" class="form-control" placeholder="Asset Tag Id">
         </div>
-      <div class="col form-group">
-          <label for="assetModel" class="font-weight-bold">Model No :</label>
-          <input type="text" Id="assetModel" class="form-control" placeholder="Asset Model Number">
-      </div>
-      <div class="col form-group">
-          <label for="assetSerail" class="font-weight-bold">Serail No :</label>
-          <input type="text" Id="assetSerail" class="form-control" placeholder="Asset Serial Number">
-      </div>
-    </div>
-    <div class="row">
         <div class="col form-group">
-            <label for="assetCost" class="font-weight-bold">Asset Cost :</label>
-            <input type="text" Id="assetCost" class="form-control" placeholder="Asset Cost">
+            <label for="assetCategory" class="font-weight-bold">Asset Category :</label>
+            <select class="custom-select" id="assetCategory">
+                <option selected>Select Asset Category.</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+          <!-- <input type="text" Id="assetCategory" class="form-control" placeholder="Asset Category"> -->
         </div>
-      <div class="col form-group">
-          <label for="purchaseFrom" class="font-weight-bold">Purchase From :</label>
-          <input type="text" Id="purchaseFrom" class="form-control" placeholder="Purchase From">
+        <div class="col form-group">
+            <label for="assetName" class="font-weight-bold">Asset Name :</label>
+          <input type="text" Id="assetName" class="form-control" placeholder="Asset Name">
+        </div>
       </div>
-      <div class="col form-group">
-          <label for="purchaseDate" class="font-weight-bold">Purchase Date :</label>
-          <input type="text" Id="purchaseDate" class="form-control" placeholder="Purchase Date">
+      <div class="row mb-0">
+        <div class="col form-group">
+            <label for="assetDesc" class="font-weight-bold">Asset Description :</label>
+            <textarea Id="assetDesc" class="form-control" placeholder="Asset Description" rows=2></textarea>
+          </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col form-group">
-          <label for="warrentyExpiryDate" class="font-weight-bold">Warrenty Expiry Date :</label>
-          <input type="text" Id="warrentyExpiryDate" class="form-control" placeholder="Warrenty Expiry Date">
+      <div class="row">
+          <div class="col form-group">
+              <label for="assetBrand" class="font-weight-bold">Brand Name :</label>
+              <input type="text" Id="assetBrand" class="form-control" placeholder="Asset Brand Name">
+          </div>
+        <div class="col form-group">
+            <label for="assetModel" class="font-weight-bold">Model No :</label>
+            <input type="text" Id="assetModel" class="form-control" placeholder="Asset Model Number">
+        </div>
+        <div class="col form-group">
+            <label for="assetSerail" class="font-weight-bold">Serail No :</label>
+            <input type="text" Id="assetSerail" class="form-control" placeholder="Asset Serial Number">
+        </div>
       </div>
-      <div class="col form-group">
-          <label for="warrentyDacument" class="font-weight-bold">Warrenty Document :</label>
-          <input type="text" Id="assetSerail" class="form-control" placeholder="Warrenty Document">
+      <div class="row">
+
+        <div class="col form-group">
+            <label for="purchaseFrom" class="font-weight-bold">Purchase From :</label>
+            <input type="text" Id="purchaseFrom" class="form-control" placeholder="Purchase From">
+        </div>
+        <div class="col form-group">
+            <label for="purchaseDate" class="font-weight-bold">Purchase Date :</label>
+            <input id="purchaseDate" type="text"   class="form-control"
+            placeholder="Purchase Date" />
+        </div>
+        <div class="col form-group">
+            <label for="warrentyExpiryDate" class="font-weight-bold">Warrenty Expiry Date :</label>
+            <input id="warrentyExpiryDate" type="text"   placeholder="Warrenty Expiry Date" class="form-control" />
+        </div>
       </div>
-    </div>
-    <div class="row">
+      <div class="row">
+        <div class="col form-group">
+            <label for="warrentyDocument" class="font-weight-bold">Warrenty Document :</label>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="warrentyDocument">
+                <label class="custom-file-label" for="warrentyDocument">Browse Warrenty Document</label>
+              </div>
+        </div>
         <div class="col form-group">
             <label for="assetImage" class="font-weight-bold">Asset Image :</label>
-            <input type="text" Id="assetImage" class="form-control" placeholder="Asset Image">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="assetImage">
+                <label class="custom-file-label" for="assetImage">Browse Asset Image</label>
+              </div>
         </div>
         <div class="col form-group">
             <img>
         </div>
       </div>
-      <button type="button" class="btn btn-primary mr-5">Submit</button>
-      <button type="button" class="btn btn-primary">Cancel</button>
-
-  </form>
   </div>
+  <div class="card-footer">
+
+         <button type="button" class="btn btn-primary mr-5"><i class="fa fa-save fa-fw"></i>&nbsp;Save</button>
+
+
+    <button type="button" class="btn btn-primary"><i class="fa fa-close fa-fw"></i>&nbsp;Cancel</button>
+  </div>
+
+</div>
+</form>
+</div>
 
