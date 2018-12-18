@@ -1,50 +1,30 @@
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
+    <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
+        <i class="fa fa-fw fa-angle-double-left"></i>&nbsp;
+        <span>{{ ''  }}</span>
+    </div>
   <div class="list-group">
       <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
           <i class="fa fa-fw fa-dashboard"></i>&nbsp;
           <span>{{ 'Dashboard'  }}</span>
       </a>
-      <a [routerLink]="['/dashboard']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-          <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
-          <span>{{ 'Charts'  }}</span>
-      </a>
-      <a [routerLink]="['/dashboard']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-          <i class="fa fa-fw fa-table"></i>&nbsp;
-          <span>{{ 'Tables'  }}</span>
-      </a>
-      <a [routerLink]="['/dashboard']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-          <i class="fa fa-fw fa-edit"></i>&nbsp;
-          <span>{{ 'Forms'  }}</span>
-      </a>
-      <a [routerLink]="['/dashboard']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-          <i class="fa fa-fw fa-desktop"></i>&nbsp;
-          <span>{{ 'Bootstrap Element'  }}</span>
-      </a>
-      <a [routerLink]="['/dashboard']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-          <i class="fa fa-fw fa-wrench"></i>&nbsp;
-          <span>{{ 'Bootstrap Grid'  }}</span>
-      </a>
-      <a [routerLink]="['/dashboard']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-          <i class="fa fa-th-list"></i>&nbsp;
-          <span>{{ 'Component'  }}</span>
-      </a>
       <div class="nested-menu">
           <a class="list-group-item">
               <i class="fa fa-plus"></i>&nbsp;
-              <span>{{ 'Menu'  }}</span>
+              <span>{{ 'Asset Management'  }}</span>
           </a>
           <li class="nested" [class.expand]="showMenu === 'pages'">
               <ul class="submenu">
                   <li>
                       <a href="javascript:void(0)">
                           <i class="fa fa-monument"></i>&nbsp;
-                          <span>{{ 'Submenu'  }}</span>
+                          <span>{{ 'Add Asset'  }}</span>
                       </a>
                   </li>
                   <li>
                       <a href="javascript:void(0)">
                           <i class="fa fa-monument"></i>&nbsp;
-                          <span>{{ 'Submenu'  }}</span>
+                          <span>{{ 'Search Asset'  }}</span>
                       </a>
                   </li>
                   <li>
@@ -56,13 +36,144 @@
               </ul>
           </li>
       </div>
+      <div class="nested-menu">
+        <a class="list-group-item">
+            <i class="fa fa-plus"></i>&nbsp;
+            <span>{{ 'Gate Pass Management'  }}</span>
+        </a>
+        <li class="nested" [class.expand]="showMenu === 'pages'">
+            <ul class="submenu">
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-monument"></i>&nbsp;
+                        <span>{{ 'All List'  }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-monument"></i>&nbsp;
+                        <span>{{ 'Pending'  }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-monument"></i>&nbsp;
+                        <span>{{ 'Approved'  }}</span>
+                    </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                      <i class="fa fa-monument"></i>&nbsp;
+                      <span>{{ 'Rejected'  }}</span>
+                  </a>
+              </li>
+            </ul>
+        </li>
+    </div>
+    <div class="nested-menu">
+      <a class="list-group-item">
+          <i class="fa fa-plus"></i>&nbsp;
+          <span>{{ 'User Management'  }}</span>
+      </a>
+      <li class="nested" [class.expand]="showMenu === 'pages'">
+          <ul class="submenu">
+              <li>
+                  <a href="javascript:void(0)">
+                      <i class="fa fa-monument"></i>&nbsp;
+                      <span>{{ 'Add User'  }}</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="javascript:void(0)">
+                      <i class="fa fa-monument"></i>&nbsp;
+                      <span>{{ 'Search User'  }}</span>
+                  </a>
+              </li>
+          </ul>
+      </li>
+  </div>
+  <div class="nested-menu">
+    <a class="list-group-item">
+        <i class="fa fa-plus"></i>&nbsp;
+        <span>{{ 'Role Management'  }}</span>
+    </a>
+    <li class="nested" [class.expand]="showMenu === 'pages'">
+        <ul class="submenu">
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="fa fa-monument"></i>&nbsp;
+                    <span>{{ 'Add Role'  }}</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="fa fa-monument"></i>&nbsp;
+                    <span>{{ 'Search Role'  }}</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</div>
+<div class="nested-menu">
+  <a class="list-group-item">
+      <i class="fa fa-plus"></i>&nbsp;
+      <span>{{ 'Basic Configuration'  }}</span>
+  </a>
+  <li class="nested" [class.expand]="showMenu === 'pages'">
+      <ul class="submenu">
+          <li>
+              <a href="javascript:void(0)">
+                  <i class="fa fa-monument"></i>&nbsp;
+                  <span>{{ 'Add Company'  }}</span>
+              </a>
+          </li>
+          <li>
+              <a href="javascript:void(0)">
+                  <i class="fa fa-monument"></i>&nbsp;
+                  <span>{{ 'Add Department'  }}</span>
+              </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+                <i class="fa fa-monument"></i>&nbsp;
+                <span>{{ 'Add Asset Category'  }}</span>
+            </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+              <i class="fa fa-monument"></i>&nbsp;
+              <span>{{ 'General Settings'  }}</span>
+          </a>
+      </li>
+      </ul>
+  </li>
+</div>
+<div class="nested-menu">
+  <a class="list-group-item">
+      <i class="fa fa-plus"></i>&nbsp;
+      <span>{{ 'Report Management'  }}</span>
+  </a>
+  <li class="nested" [class.expand]="showMenu === 'pages'">
+      <ul class="submenu">
+          <li>
+              <a href="javascript:void(0)">
+                  <i class="fa fa-monument"></i>&nbsp;
+                  <span>{{ 'Asset Pass'  }}</span>
+              </a>
+          </li>
+          <li>
+              <a href="javascript:void(0)">
+                  <i class="fa fa-monument"></i>&nbsp;
+                  <span>{{ 'Asset Report'  }}</span>
+              </a>
+          </li>
+      </ul>
+  </li>
+</div>
       <a [routerLink]="['/dashboard']" [routerLinkActive]="['router-link-active']" class="list-group-item">
           <i class="fa fa-file-o"></i>&nbsp;
           <span>{{ 'Blank Page'  }}</span>
       </a>
   </div>
-  <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
-      <i class="fa fa-fw fa-angle-double-left"></i>&nbsp;
-      <span>{{ 'Collapse Sidebar'  }}</span>
-  </div>
+
 </nav>
