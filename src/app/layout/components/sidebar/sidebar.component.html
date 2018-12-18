@@ -9,7 +9,7 @@
           <span>{{ 'Dashboard'  }}</span>
       </a>
       <div class="nested-menu">
-          <a class="list-group-item">
+          <a class="list-group-item" (click)="addExpandClass('pages')">
               <i class="fa fa-plus"></i>&nbsp;
               <span>{{ 'Asset Management'  }}</span>
           </a>
@@ -37,7 +37,7 @@
           </li>
       </div>
       <div class="nested-menu">
-        <a class="list-group-item">
+        <a class="list-group-item" (click)="addExpandClass('pages')">
             <i class="fa fa-plus"></i>&nbsp;
             <span>{{ 'Gate Pass Management'  }}</span>
         </a>
@@ -71,7 +71,7 @@
         </li>
     </div>
     <div class="nested-menu">
-      <a class="list-group-item">
+      <a class="list-group-item" (click)="addExpandClass('pages')">
           <i class="fa fa-plus"></i>&nbsp;
           <span>{{ 'User Management'  }}</span>
       </a>
@@ -93,7 +93,7 @@
       </li>
   </div>
   <div class="nested-menu">
-    <a class="list-group-item">
+    <a class="list-group-item" (click)="addExpandClass('pages')">
         <i class="fa fa-plus"></i>&nbsp;
         <span>{{ 'Role Management'  }}</span>
     </a>
@@ -115,7 +115,7 @@
     </li>
 </div>
 <div class="nested-menu">
-  <a class="list-group-item">
+  <a class="list-group-item" (click)="addExpandClass('pages')">
       <i class="fa fa-plus"></i>&nbsp;
       <span>{{ 'Basic Configuration'  }}</span>
   </a>
@@ -149,7 +149,7 @@
   </li>
 </div>
 <div class="nested-menu">
-  <a class="list-group-item">
+  <a class="list-group-item" (click)="addExpandClass('pages')">
       <i class="fa fa-plus"></i>&nbsp;
       <span>{{ 'Report Management'  }}</span>
   </a>
