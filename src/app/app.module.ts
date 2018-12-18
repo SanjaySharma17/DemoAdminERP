@@ -18,6 +18,7 @@ import { SearchRoleComponent } from './RoleManagement/search-role/search-role.co
 import { LoginFormComponent } from './login-form/login-form.component';
 import { SidebarComponent } from './layout/components/sidebar/sidebar.component';
 import { LayoutComponent } from './layout/layout.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { LayoutComponent } from './layout/layout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    BsDatepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 <div class="container">
-<form>
+    <form>
 <div class="card">
   <div class="card-header h4 text-white bg-primary">
       <i class="fa fa-database fa-fw"></i>&nbsp;Add Asset
@@ -55,12 +55,12 @@
         </div>
         <div class="col form-group">
             <label for="purchaseDate" class="font-weight-bold">Purchase Date :</label>
-            <input id="purchaseDate" type="text"   class="form-control"
+            <input id="purchaseDate" type="text"  bsDatepicker [bsConfig]="datePickerConfig" class="form-control"
             placeholder="Purchase Date" />
         </div>
         <div class="col form-group">
             <label for="warrentyExpiryDate" class="font-weight-bold">Warrenty Expiry Date :</label>
-            <input id="warrentyExpiryDate" type="text"   placeholder="Warrenty Expiry Date" class="form-control" />
+            <input id="warrentyExpiryDate" type="text"  bsDatepicker [bsConfig]="datePickerConfig" placeholder="Warrenty Expiry Date" class="form-control" />
         </div>
       </div>
       <div class="row">
@@ -94,4 +94,3 @@
 </div>
 </form>
 </div>
-
