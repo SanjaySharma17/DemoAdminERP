@@ -16,21 +16,15 @@
           <li class="nested" [class.expand]="showMenu === 'page1'">
               <ul class="submenu">
                   <li>
-                      <a href="javascript:void(0)">
+                    <a routerLink="/addasset" [routerLinkActive]="['router-link-active']" class="list-group-item">
                           <i class="fa fa-monument"></i>&nbsp;
                           <span>{{ 'Add Asset'  }}</span>
                       </a>
                   </li>
                   <li>
-                      <a href="javascript:void(0)">
+                      <a routerLink="/searchasset" [routerLinkActive]="['router-link-active']" class="list-group-item">
                           <i class="fa fa-monument"></i>&nbsp;
                           <span>{{ 'Search Asset'  }}</span>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="javascript:void(0)">
-                          <i class="fa fa-monument"></i>&nbsp;
-                          <span>{{ 'Submenu'  }}</span>
                       </a>
                   </li>
               </ul>
@@ -44,25 +38,25 @@
         <li class="nested" [class.expand]="showMenu === 'page2'">
             <ul class="submenu">
                 <li>
-                    <a href="javascript:void(0)">
+                    <a routerLink="/listgatepass" [routerLinkActive]="['router-link-active']" class="list-group-item">
                         <i class="fa fa-monument"></i>&nbsp;
                         <span>{{ 'All List'  }}</span>
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)">
+                    <a routerLink="/pendinggatepass" [routerLinkActive]="['router-link-active']" class="list-group-item">
                         <i class="fa fa-monument"></i>&nbsp;
                         <span>{{ 'Pending'  }}</span>
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)">
+                    <a routerLink="/approvedgatepass" [routerLinkActive]="['router-link-active']" class="list-group-item">
                         <i class="fa fa-monument"></i>&nbsp;
                         <span>{{ 'Approved'  }}</span>
                     </a>
                 </li>
                 <li>
-                  <a href="javascript:void(0)">
+                    <a routerLink="/rejectedgatepass" [routerLinkActive]="['router-link-active']" class="list-group-item">
                       <i class="fa fa-monument"></i>&nbsp;
                       <span>{{ 'Rejected'  }}</span>
                   </a>
@@ -78,13 +72,13 @@
       <li class="nested" [class.expand]="showMenu === 'page3'">
           <ul class="submenu">
               <li>
-                  <a href="javascript:void(0)">
+                  <a routerLink="/adduser" [routerLinkActive]="['router-link-active']" class="list-group-item">
                       <i class="fa fa-monument"></i>&nbsp;
                       <span>{{ 'Add User'  }}</span>
                   </a>
               </li>
               <li>
-                  <a href="javascript:void(0)">
+                  <a routerLink="/serchuser" [routerLinkActive]="['router-link-active']" class="list-group-item">
                       <i class="fa fa-monument"></i>&nbsp;
                       <span>{{ 'Search User'  }}</span>
                   </a>
@@ -100,13 +94,13 @@
     <li class="nested" [class.expand]="showMenu === 'page4'">
         <ul class="submenu">
             <li>
-                <a href="javascript:void(0)">
+                <a routerLink="/addrole" [routerLinkActive]="['router-link-active']" class="list-group-item">
                     <i class="fa fa-monument"></i>&nbsp;
                     <span>{{ 'Add Role'  }}</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)">
+                <a routerLink="/searchrole" [routerLinkActive]="['router-link-active']" class="list-group-item">
                     <i class="fa fa-monument"></i>&nbsp;
                     <span>{{ 'Search Role'  }}</span>
                 </a>
@@ -122,25 +116,25 @@
   <li class="nested" [class.expand]="showMenu === 'page5'">
       <ul class="submenu">
           <li>
-              <a href="javascript:void(0)">
+              <a routerLink="/addcompany" [routerLinkActive]="['router-link-active']" class="list-group-item">
                   <i class="fa fa-monument"></i>&nbsp;
                   <span>{{ 'Add Company'  }}</span>
               </a>
           </li>
           <li>
-              <a href="javascript:void(0)">
+              <a routerLink="/adddepartment" [routerLinkActive]="['router-link-active']" class="list-group-item">
                   <i class="fa fa-monument"></i>&nbsp;
                   <span>{{ 'Add Department'  }}</span>
               </a>
           </li>
           <li>
-            <a href="javascript:void(0)">
+              <a routerLink="/addassetcategory" [routerLinkActive]="['router-link-active']" class="list-group-item">
                 <i class="fa fa-monument"></i>&nbsp;
                 <span>{{ 'Add Asset Category'  }}</span>
             </a>
         </li>
         <li>
-          <a href="javascript:void(0)">
+            <a routerLink="/generalsettings" [routerLinkActive]="['router-link-active']" class="list-group-item">
               <i class="fa fa-monument"></i>&nbsp;
               <span>{{ 'General Settings'  }}</span>
           </a>
@@ -156,13 +150,13 @@
   <li class="nested" [class.expand]="showMenu === 'page6'">
       <ul class="submenu">
           <li>
-              <a href="javascript:void(0)">
+              <a routerLink="/repoassetpass" [routerLinkActive]="['router-link-active']" class="list-group-item">
                   <i class="fa fa-monument"></i>&nbsp;
                   <span>{{ 'Asset Pass'  }}</span>
               </a>
           </li>
           <li>
-              <a href="javascript:void(0)">
+              <a routerLink="/repoasset" [routerLinkActive]="['router-link-active']" class="list-group-item">
                   <i class="fa fa-monument"></i>&nbsp;
                   <span>{{ 'Asset Report'  }}</span>
               </a>
@@ -170,7 +164,7 @@
       </ul>
   </li>
 </div>
-      <a [routerLink]="['/dashboard']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+      <a [routerLink]="['/blank']" [routerLinkActive]="['router-link-active']" class="list-group-item">
           <i class="fa fa-file-o"></i>&nbsp;
           <span>{{ 'Blank Page'  }}</span>
       </a>

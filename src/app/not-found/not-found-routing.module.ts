@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AssetFormComponent } from '../asset-form/asset-form.component';
-
+import { NotFoundComponent } from './not-found.component';
 
 const routes: Routes = [
     {
-        path: '', component: AssetFormComponent
+        path: '', component: NotFoundComponent
     }
 ];
 
@@ -13,5 +12,5 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class LoginRoutingModule {
+export class NotFoundRoutingModule {
 }

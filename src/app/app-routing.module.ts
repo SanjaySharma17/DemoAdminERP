@@ -1,19 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AssetFormComponent } from './asset-form/asset-form.component';
+import { AuthGuardService } from './guards/auth-guard.service';
 
-const routes: Routes = [  
-  // {path: 'user', component : UserListComponent},
-  // {path: 'login', component : LoginComponent},
-  // {path: 'list', component : ListEmployeesComponent, resolve : { empList :  EmployeeListResolverService}},
-  // {path : 'edit/:id' , component : CreateEmployeeComponent, canDeactivate: [CreateEmployeeCanDeactivateGaurdService]},
-  // {path: 'employees/:id', component : EmployeeDetailComponent,
-  //  canActivate : [EmployeeGuardService]},
-  // {path : '', redirectTo: '/login', pathMatch: 'full'},
-  // {path : 'notfound' , component: PageNotFoundComponent}
-   { path: '', loadChildren: './layout/layout.module#LayoutModule' },
-   { path: 'login', loadChildren: './login-form/login.module#LoginModule' },
-   {path: 'AddAsset', component : AssetFormComponent},
+const routes: Routes = [
+
+   { path: '', loadChildren: './layout/layout.module#LayoutModule', canActivate: [AuthGuardService] },
+   { path: 'login', loadChildren: './login/login.module#LoginModule' },
+   { path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },
    { path: '**', redirectTo: 'not-found' }
 ];
 
