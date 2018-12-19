@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 const routes: Routes = [
     {
@@ -8,11 +9,8 @@ const routes: Routes = [
         component: LayoutComponent,
         children: [
             { path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
-            { path: 'dashboard', loadChildren: '../dashboard/dashboard.module#DashboardModule' },
+            { path: 'dashboard', component: DashboardComponent},
             { path: 'role', loadChildren: '../role-management/role-management.module#RoleManagementModule' },
-            // { path: '', loadChildren: '' },
-            // { path: '', loadChildren: '' },
-            // { path: '', loadChildren: '' },
         ]
     }
 ];
