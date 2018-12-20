@@ -1,5 +1,5 @@
 .form-group {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.01rem;
  
 }
 .form-control {
@@ -9,8 +9,8 @@
  
 }
 .col-form-label {
-  padding-top: calc(.175rem + 1px);
-  padding-bottom: calc(.175rem + 1px);
+  padding-top: calc(.001rem + 1px);
+  padding-bottom: calc(.001rem + 1px);
 }
 textarea.form-control{
   height: calc(3.75rem + 2px)!important;
@@ -24,7 +24,7 @@ textarea.form-control{
   padding: 0.5rem;
 }
 .card-header {
-  padding: .35rem 0.35rem;
+  padding: .30rem 0.30rem;
   margin-bottom: 0px;
 }
 .card-footer {

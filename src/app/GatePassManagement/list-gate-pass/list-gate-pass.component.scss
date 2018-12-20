@@ -1,10 +1,14 @@
 .form-group {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.01rem;
 }
 .form-control {
   border-color: #007bff;
   height: calc(1.75rem + 2px);
   padding: 0.175rem 1.5rem 0.175rem 0.75rem;
+}
+.col-form-label {
+  padding-top: calc(.001rem + 1px);
+  padding-bottom: calc(.001rem + 1px);
 }
 textarea.form-control{
   height: calc(3.75rem + 2px)!important;
@@ -38,10 +42,6 @@ table.table-bordered > tbody > tr > td{
 }
 .font-weight-bold {
   font-weight: 500!important;
-}
-.col-form-label {
-  padding-top: calc(.175rem + 1px);
-  padding-bottom: calc(.175rem + 1px);
 }
 
 .custom-select{
