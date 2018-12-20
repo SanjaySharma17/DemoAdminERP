@@ -12,6 +12,7 @@ const routes: Routes = [
             { path: 'dashboard', component: DashboardComponent},
             { path: 'role', loadChildren: '../role-management/role-management.module#RoleManagementModule' },
             { path: 'user', loadChildren: '../UserManagement/user-management.module#UserManagementModule' },
+            { path: 'basicconfig', loadChildren: '../basic-configuration/basic-config.module#BasicConfigModule' },
         ]
     }
 ];
