@@ -16,6 +16,17 @@
             <label for="gatepassno" class="font-weight-bold">Gate Pass No :</label>
            <input type="text" Id="gatepassno" readonly class="form-control">
         </div>
+        <div class="col form-group">
+            <label for="isreturnable" class="font-weight-bold">Is Returnable :</label>
+            <select class="custom-select" id="isreturnable">
+                  <option>Returnable</option>
+                  <option>Non-Returnable</option>
+                </select>
+        </div>
+      <div class="col form-group">
+          <label for="preparedBy" class="font-weight-bold">Prepared By :</label>
+          <input type="text" Id="preparedBy" class="form-control" readonly>
+      </div>
       </div>
       <div class="row">
               <label for="sendtoname" class="col form-group font-weight-bold">Send Address Detail :</label>
@@ -36,17 +47,7 @@
       </div>
 
       <div class="row">
-          <div class="col form-group">
-              <label for="isreturnable" class="font-weight-bold">Is Returnable :</label>
-              <select class="custom-select" id="isreturnable">
-                    <option>Returnable</option>
-                    <option>Non-Returnable</option>
-                  </select>
-          </div>
-        <div class="col form-group">
-            <label for="preparedBy" class="font-weight-bold">Prepared By :</label>
-            <input type="text" Id="preparedBy" class="form-control" readonly>
-        </div>
+          
         <div class="col form-group">
             <label for="remarks" class="font-weight-bold">Remarks</label>
             <textarea class="form-control" rows="2" id="remarks"></textarea>
