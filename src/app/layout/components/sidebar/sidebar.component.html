@@ -72,17 +72,23 @@
       <li class="nested" [class.expand]="showMenu === 'page3'">
           <ul class="submenu">
               <li>
-                  <a routerLink="/adduser" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                  <a routerLink="/user/adduser" [routerLinkActive]="['router-link-active']" class="list-group-item">
                       <i class="fa fa-monument"></i>&nbsp;
                       <span>{{ 'Add User'  }}</span>
                   </a>
               </li>
               <li>
-                  <a routerLink="/serchuser" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                  <a routerLink="/user/searchuser" [routerLinkActive]="['router-link-active']" class="list-group-item">
                       <i class="fa fa-monument"></i>&nbsp;
                       <span>{{ 'Search User'  }}</span>
                   </a>
               </li>
+              <li>
+                <a routerLink="/user/edituser" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                    <i class="fa fa-monument"></i>&nbsp;
+                    <span>{{ 'Edit User'  }}</span>
+                </a>
+            </li>
           </ul>
       </li>
   </div>

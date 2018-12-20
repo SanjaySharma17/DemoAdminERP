@@ -11,6 +11,7 @@ const routes: Routes = [
             { path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
             { path: 'dashboard', component: DashboardComponent},
             { path: 'role', loadChildren: '../role-management/role-management.module#RoleManagementModule' },
+            { path: 'user', loadChildren: '../UserManagement/user-management.module#UserManagementModule' },
         ]
     }
 ];
