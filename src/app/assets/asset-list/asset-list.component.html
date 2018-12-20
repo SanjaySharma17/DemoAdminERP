@@ -1,19 +1,20 @@
 <div class="container">
-    <form>
-    <div class="card border border-primary">
-    <div class="card-header font-weight-bold  text-white bg-primary">
-      <i class="fa fa-database fa-fw"></i>&nbsp;Add Asset
-  </div>
+    <div class="row">
+      <div class="col">
+  <form>
+        <div class="card border border-primary">
+                <div class="card-header font-weight-bold  text-white bg-primary">
+        <i class="fa fa-database fa-fw"></i>&nbsp;Search Asset Gate Pass
+    </div>
   
-  <div class="card-body text-primary">
-  
-      <div class="row mb-0">
-        <div class="col form-group">
-            <label for="assetTagId" class="font-weight-bold">Asset Tag Id :</label>
-          <input type="text" Id="assetTagId" class="form-control" placeholder="Asset Tag Id">
-        </div>
-        <div class="col form-group">
-            <label for="assetCategory" class="font-weight-bold">Asset Category :</label>
+    <div class="card-body text-primary">
+        <div class="row">
+          <div class="col form-group">
+              <label for="assetTagId" class="col-form-label font-weight-bold">Asset Tag ID :</label>
+            <input type="text" Id="assetTagId" class="form-control" placeholder="Enter Asset Tag ID">
+          </div>
+          <div class="col form-group">
+            <label for="assetCategory" class="col-form-label font-weight-bold">Asset Category :</label>
             <select class="custom-select" id="assetCategory">
                 <option selected>Select Asset Category.</option>
                 <option value="1">One</option>
@@ -23,73 +24,75 @@
           <!-- <input type="text" Id="assetCategory" class="form-control" placeholder="Asset Category"> -->
         </div>
         <div class="col form-group">
-            <label for="assetName" class="font-weight-bold">Asset Name :</label>
+            <label for="assetName" class="col-form-label font-weight-bold">Asset Name :</label>
           <input type="text" Id="assetName" class="form-control" placeholder="Asset Name">
         </div>
-      </div>
-      <div class="row mb-0">
-        <div class="col form-group">
-            <label for="assetDesc" class="font-weight-bold">Asset Description :</label>
-            <textarea Id="assetDesc" class="form-control" placeholder="Asset Description" rows=2></textarea>
           </div>
-      </div>
-      <div class="row">
-          <div class="col form-group">
-              <label for="assetBrand" class="font-weight-bold">Brand Name :</label>
-              <input type="text" Id="assetBrand" class="form-control" placeholder="Asset Brand Name">
+          <div class="row">
+            <div class="col-6 form-group">
+                <label for="purchasetodate" class="col-form-label font-weight-bold">Purchase Date :</label>
+            </div>
+            <div class="col-6 form-group">
+                <label for="warrantyexpiretodate" class="col-form-label font-weight-bold">Warranty Expire Date :</label>
+            </div>
           </div>
-        <div class="col form-group">
-            <label for="assetModel" class="font-weight-bold">Model No :</label>
-            <input type="text" Id="assetModel" class="form-control" placeholder="Asset Model Number">
-        </div>
-        <div class="col form-group">
-            <label for="assetSerail" class="font-weight-bold">Serail No :</label>
-            <input type="text" Id="assetSerail" class="form-control" placeholder="Asset Serial Number">
-        </div>
-      </div>
-      <div class="row">
-  
-        <div class="col form-group">
-            <label for="purchaseFrom" class="font-weight-bold">Purchase From :</label>
-            <input type="text" Id="purchaseFrom" class="form-control" placeholder="Purchase From">
-        </div>
-        <div class="col form-group">
-            <label for="purchaseDate" class="font-weight-bold">Purchase Date :</label>
-            <input id="purchaseDate" type="text"  bsDatepicker [bsConfig]="datePickerConfig" class="form-control"
-            placeholder="Purchase Date" />
-        </div>
-        <div class="col form-group">
-            <label for="warrentyExpiryDate" class="font-weight-bold">Warrenty Expiry Date :</label>
-            <input id="warrentyExpiryDate" type="text"  bsDatepicker [bsConfig]="datePickerConfig" placeholder="Warrenty Expiry Date" class="form-control" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col form-group">
-            <label for="warrentyDocument" class="font-weight-bold">Warrenty Document :</label>
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="warrentyDocument">
-                <label class="custom-file-label" for="warrentyDocument">Browse Warrenty Document</label>
+        <div class="row">
+           <div class="col-3 form-group">              
+              <input type="text" Id="gptodate" class="form-control" placeholder="Enter Purchase To Date">
+            </div>
+            <div class="col-3 form-group">               
+                <input type="text" Id="gpfromdate" class="form-control" placeholder="Enter Purchase From Date">
+            </div>
+            <div class="col-3 form-group">              
+                <input type="text" Id="gptodate" class="form-control" placeholder="To Date">
               </div>
-        </div>
-        <div class="col form-group">
-            <label for="assetImage" class="font-weight-bold">Asset Image :</label>
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="assetImage">
-                <label class="custom-file-label" for="assetImage">Browse Asset Image</label>
+              <div class="col-3 form-group">               
+                  <input type="text" Id="gpfromdate" class="form-control" placeholder="From Date">
               </div>
+        </div>       
+     </div>
+     <div class="card-footer">
+        <div class="text-right">
+            <button type="button" class="btn btn-primary mr-1 m-1  btn-sm font-weight-bold"><i class="fa fa-save fa-fw"></i>&nbsp;Search</button>
+            <button type="button" class="btn btn-primary  btn-sm m-1 font-weight-bold"><i class="fa fa-close fa-fw"></i>&nbsp;Cancel</button>
         </div>
-        <div class="col form-group">
-            <img>
-        </div>
-      </div>
-  </div>
-  <div class="card-footer text-right">
-  
-         <button type="button" class="btn btn-primary mr-1 m-1 btn-sm font-weight-bold"><i class="fa fa-save fa-fw"></i>&nbsp;Save</button>
-    <button type="button" class="btn btn-primary m-1 btn-sm font-weight-bold"><i class="fa fa-close fa-fw"></i>&nbsp;Cancel</button>
-  </div>
-  
+     </div>
   </div>
   </form>
+  </div>
+  </div>
+  
+  <div class="row mt-3">
+      <div class="col">
+          <table class="table table-bordered table-md text-primary">
+              <thead>
+                <th>#</th>
+                <th>Asset Tag ID</th>
+                <th>Asset Category</th>
+                <th>Asset Name</th>                
+                <th>Purchase Date</th>
+                <th>Cost</th>
+                <th>Warranty Expire Date</th>
+                <th></th>
+              </thead>
+            <tbody>
+              <tr>
+                <td>1.</td>
+                <td>TAG023223</td>
+                <td>Computers</td>
+                <td>Laptop</td>
+                <td>03/11/2019</td>
+                <td>45,000</td>
+                <td>03/11/2020</td>
+                <td class="text-center">
+                    <a href="#" title="View"><i class="fa fa-building fa-fw"></i></a>
+                    &nbsp;<a href="#" title="Edit"><i class="fa fa-pencil-square-o fa-fw"></i></a>                  
+                    &nbsp;<a href="#" title="Delete"><i class="fa fa-trash-o fa-fw"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
   </div>
   
