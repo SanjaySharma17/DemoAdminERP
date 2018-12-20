@@ -6,11 +6,11 @@ import { AssetListComponent } from '../assets/asset-list/asset-list.component';
 
 const routes: Routes = [
   {
-    path: '/addasset',
+    path: 'addasset',
     component: AddAssetComponent
   },
   {
-    path: '/listasset',
+    path: 'listasset',
     component: AssetListComponent
   }
 ];

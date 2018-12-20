@@ -16,15 +16,15 @@
           <li class="nested" [class.expand]="showMenu === 'page1'">
               <ul class="submenu">
                   <li>
-                    <a routerLink="/addasset" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                    <a routerLink="/assets/addasset" [routerLinkActive]="['router-link-active']" class="list-group-item">
                           <i class="fa fa-monument"></i>&nbsp;
                           <span>{{ 'Add Asset'  }}</span>
                       </a>
                   </li>
                   <li>
-                      <a routerLink="/searchasset" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                      <a routerLink="/assets/listasset" [routerLinkActive]="['router-link-active']" class="list-group-item">
                           <i class="fa fa-monument"></i>&nbsp;
-                          <span>{{ 'Search Asset'  }}</span>
+                          <span>{{ 'List Asset'  }}</span>
                       </a>
                   </li>
               </ul>
@@ -37,13 +37,19 @@
         </a>
         <li class="nested" [class.expand]="showMenu === 'page2'">
             <ul class="submenu">
+                    <li>
+                            <a routerLink="/gatepass/creategatepass" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-monument"></i>&nbsp;
+                                <span>{{ 'Create Gate Pass'  }}</span>
+                            </a>
+                        </li>
                 <li>
-                    <a routerLink="/listgatepass" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                    <a routerLink="/gatepass/listgatepass" [routerLinkActive]="['router-link-active']" class="list-group-item">
                         <i class="fa fa-monument"></i>&nbsp;
-                        <span>{{ 'All List'  }}</span>
+                        <span>{{ 'List Gate Pass'  }}</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a routerLink="/pendinggatepass" [routerLinkActive]="['router-link-active']" class="list-group-item">
                         <i class="fa fa-monument"></i>&nbsp;
                         <span>{{ 'Pending'  }}</span>
@@ -60,7 +66,7 @@
                       <i class="fa fa-monument"></i>&nbsp;
                       <span>{{ 'Rejected'  }}</span>
                   </a>
-              </li>
+              </li> -->
             </ul>
         </li>
     </div>
@@ -74,21 +80,21 @@
               <li>
                   <a routerLink="/user/adduser" [routerLinkActive]="['router-link-active']" class="list-group-item">
                       <i class="fa fa-monument"></i>&nbsp;
-                      <span>{{ 'Add User'  }}</span>
+                      <span>{{ 'Manage User'  }}</span>
                   </a>
               </li>
-              <li>
+              <!-- <li>
                   <a routerLink="/user/searchuser" [routerLinkActive]="['router-link-active']" class="list-group-item">
                       <i class="fa fa-monument"></i>&nbsp;
                       <span>{{ 'Search User'  }}</span>
                   </a>
-              </li>
-              <li>
+              </li> -->
+              <!-- <li>
                 <a routerLink="/user/edituser" [routerLinkActive]="['router-link-active']" class="list-group-item">
                     <i class="fa fa-monument"></i>&nbsp;
                     <span>{{ 'Edit User'  }}</span>
                 </a>
-            </li>
+            </li> -->
           </ul>
       </li>
   </div>
@@ -102,15 +108,15 @@
             <li>
                 <a routerLink="/role/addrole" [routerLinkActive]="['router-link-active']" class="list-group-item">
                     <i class="fa fa-monument"></i>&nbsp;
-                    <span>{{ 'Add Role'  }}</span>
+                    <span>{{ 'Manage Role'  }}</span>
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 <a routerLink="/role/searchrole" [routerLinkActive]="['router-link-active']" class="list-group-item">
                     <i class="fa fa-monument"></i>&nbsp;
                     <span>{{ 'Search Role'  }}</span>
                 </a>
-            </li>
+            </li> -->
         </ul>
     </li>
 </div>
@@ -122,12 +128,12 @@
   <li class="nested" [class.expand]="showMenu === 'page5'">
       <ul class="submenu">
           <li>
-              <a routerLink="/basicconfig/addcompany" [routerLinkActive]="['router-link-active']" class="list-group-item">
+              <a routerLink="/basicconfig/configuration" [routerLinkActive]="['router-link-active']" class="list-group-item">
                   <i class="fa fa-monument"></i>&nbsp;
-                  <span>{{ 'Add Company'  }}</span>
+                  <span>{{ 'Configuration'  }}</span>
               </a>
           </li>
-          <li>
+          <!-- <li>
               <a routerLink="/basicconfig/adddepartment" [routerLinkActive]="['router-link-active']" class="list-group-item">
                   <i class="fa fa-monument"></i>&nbsp;
                   <span>{{ 'Add Department'  }}</span>
@@ -138,7 +144,7 @@
                 <i class="fa fa-monument"></i>&nbsp;
                 <span>{{ 'Add Asset Category'  }}</span>
             </a>
-        </li>
+        </li> -->
         <!-- <li>
             <a routerLink="/generalsettings" [routerLinkActive]="['router-link-active']" class="list-group-item">
               <i class="fa fa-monument"></i>&nbsp;
@@ -156,13 +162,13 @@
   <li class="nested" [class.expand]="showMenu === 'page6'">
       <ul class="submenu">
           <li>
-              <a routerLink="/repoassetpass" [routerLinkActive]="['router-link-active']" class="list-group-item">
+              <a routerLink="/report/gatepassreport" [routerLinkActive]="['router-link-active']" class="list-group-item">
                   <i class="fa fa-monument"></i>&nbsp;
-                  <span>{{ 'Asset Pass'  }}</span>
+                  <span>{{ 'Gate Pass Report'  }}</span>
               </a>
           </li>
           <li>
-              <a routerLink="/repoasset" [routerLinkActive]="['router-link-active']" class="list-group-item">
+              <a routerLink="/report/assetreport" [routerLinkActive]="['router-link-active']" class="list-group-item">
                   <i class="fa fa-monument"></i>&nbsp;
                   <span>{{ 'Asset Report'  }}</span>
               </a>
