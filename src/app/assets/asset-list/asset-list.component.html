@@ -6,7 +6,7 @@
                 <div class="card-header font-weight-bold  text-white bg-primary">
         <i class="fa fa-database fa-fw"></i>&nbsp;Search Asset Gate Pass
     </div>
-  
+
     <div class="card-body text-primary">
         <div class="row">
           <div class="col form-group">
@@ -37,19 +37,19 @@
             </div>
           </div>
         <div class="row">
-           <div class="col-3 form-group">              
+           <div class="col-3 form-group">
               <input type="text" Id="gptodate" class="form-control" placeholder="Enter Purchase To Date">
             </div>
-            <div class="col-3 form-group">               
+            <div class="col-3 form-group">
                 <input type="text" Id="gpfromdate" class="form-control" placeholder="Enter Purchase From Date">
             </div>
-            <div class="col-3 form-group">              
+            <div class="col-3 form-group">
                 <input type="text" Id="gptodate" class="form-control" placeholder="To Date">
               </div>
-              <div class="col-3 form-group">               
+              <div class="col-3 form-group">
                   <input type="text" Id="gpfromdate" class="form-control" placeholder="From Date">
               </div>
-        </div>       
+        </div>
      </div>
      <div class="card-footer">
         <div class="text-right">
@@ -61,7 +61,7 @@
   </form>
   </div>
   </div>
-  
+
   <div class="row mt-3">
       <div class="col">
           <table class="table table-bordered table-md text-primary">
@@ -69,7 +69,7 @@
                 <th>#</th>
                 <th>Asset Tag ID</th>
                 <th>Asset Category</th>
-                <th>Asset Name</th>                
+                <th>Asset Name</th>
                 <th>Purchase Date</th>
                 <th>Cost</th>
                 <th>Warranty Expire Date</th>
@@ -85,8 +85,8 @@
                 <td>45,000</td>
                 <td>03/11/2020</td>
                 <td class="text-center">
-                    <a href="#" title="View"><i class="fa fa-building fa-fw"></i></a>
-                    &nbsp;<a href="#" title="Edit"><i class="fa fa-pencil-square-o fa-fw"></i></a>                  
+                    <a title="View" (click)="openModal(template)"><i class="fa fa-building fa-fw"></i></a>
+                    &nbsp;<a [routerLinkActive]="['router-link-active']" class="list-group-item" title="Edit"><i class="fa fa-pencil-square-o fa-fw"></i></a>
                     &nbsp;<a href="#" title="Delete"><i class="fa fa-trash-o fa-fw"></i></a>
                 </td>
               </tr>
@@ -95,4 +95,33 @@
       </div>
     </div>
   </div>
-  
+
+  <ng-template #template>
+      <div class="modal-dialog">
+          <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-3 form-group">
+                 <input type="text" Id="gptodate" class="form-control" placeholder="Enter Purchase To Date">
+               </div>
+               <div class="col-3 form-group">
+                   <input type="text" Id="gpfromdate" class="form-control" placeholder="Enter Purchase From Date">
+               </div>
+               <div class="col-3 form-group">
+                   <input type="text" Id="gptodate" class="form-control" placeholder="To Date">
+                 </div>
+                 <div class="col-3 form-group">
+                     <input type="text" Id="gpfromdate" class="form-control" placeholder="From Date">
+                 </div>
+           </div>
+      </div>
+      </div>
+      </div>
+
+    </ng-template>

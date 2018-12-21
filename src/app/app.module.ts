@@ -7,18 +7,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { AuthGuardService } from './guards/auth-guard.service';
 
-
-
-
 @NgModule({
   declarations: [
-    AppComponent
-     
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule,   
+    CommonModule,
     NgbModule.forRoot(),
   ],
   providers: [AuthGuardService],
